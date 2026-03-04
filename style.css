@@ -1,0 +1,167 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    background:#f4f4f4;
+}
+
+/* Navbar */
+header{
+    background:#111;
+    color:#fff;
+    padding:15px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+}
+
+.navbar ul li{
+    margin-left:20px;
+}
+
+.navbar ul li a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.navbar ul li a:hover{
+    color:#00adb5;
+}
+
+/* Hero */
+.hero{
+    height:80vh;
+    background:linear-gradient(to right,#00adb5,#393e46);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00adb5;
+}
+
+/* Section */
+.section{
+    padding:60px 0;
+    background:#fff;
+    margin-bottom:20px;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#f9f9f9;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* Form */
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#00adb5;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+    }
+    .navbar ul{
+        flex-direction:column;
+        margin-top:10px;
+    }
+    .navbar ul li{
+        margin:10px 0;
+    }
+    .grid{
+        grid-template-columns:1fr;
+    }
+    .hero h1{
+        font-size:2rem;
+    }
+}
