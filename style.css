@@ -13,12 +13,18 @@ nav{
   background:#0d6efd;
   padding:10px 20px;
   display:flex;
+  justify-content:space-between; /* desktop এ links side এ যাবে */
+  align-items:center;
   flex-wrap:wrap;
-  justify-content:center; /* center all links */
-  gap:10px; /* links এর মধ্যে gap */
 }
 
-/* Navbar links */
+/* Links container */
+nav .nav-links{
+  display:flex;
+  gap:10px;
+}
+
+/* Links style */
 nav a{
   color:white;
   text-decoration:none;
@@ -29,6 +35,23 @@ nav a{
 
 nav a:hover{
   background:rgba(255,255,255,0.2);
+}
+
+/* Responsive - Mobile */
+@media(max-width:768px){
+  nav{
+    justify-content:center; /* mobile এ links center */
+  }
+  nav .nav-links{
+    flex-direction:column;
+    width:100%;
+    align-items:center;
+  }
+  nav a{
+    width:80%;
+    text-align:center;
+    margin:5px 0;
+  }
 }
 /* Container */
 .container{
