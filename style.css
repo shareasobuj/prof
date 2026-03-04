@@ -8,26 +8,28 @@ body{
     background: purple;
 }
 
-/* Navbar */
+/* Navbar container */
 nav{
-    background:#0d6efd;
-    padding:15px;
-    text-align:center;
+  background:#0d6efd;
+  padding:10px 20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center; /* center all links */
+  gap:10px; /* links এর মধ্যে gap */
 }
-/* container, nav, footer আগের মতো */
 
-
+/* Navbar links */
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:bold;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:5px;
 }
 
 nav a:hover{
-    text-decoration:underline;
+  background:rgba(255,255,255,0.2);
 }
-
 /* Container */
 .container{
     width:90%;
@@ -68,4 +70,15 @@ button{
 
 button:hover{
     background:#084298;
+}
+@media(max-width:768px){
+    nav{
+        flex-direction:column; /* ফোনে vertically দেখাবে */
+        align-items:center;
+    }
+    nav a{
+        width:80%; /* links পুরো width নেবে */
+        text-align:center;
+        margin:5px 0;
+    }
 }
