@@ -31,6 +31,7 @@
 <footer>
 <p>© 2026 My Website</p>
 </footer>
+  <script>let i=0,images=['images/bg1.jpg','images/bg2.jpg','images/bg3.jpg','images/bg4.jpg'];setInterval(()=>document.body.style.backgroundImage=`url(${images[i=(i+1)%images.length]})`,5000);document.body.style.backgroundImage=`url(${images[0]})`;</script>
 
 </body>
 </html>
