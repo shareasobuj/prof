@@ -1,294 +1,301 @@
-/* ===================================
+/* ==============================
    RESET & ROOT COLORS
-=================================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary:#2563eb;
-    --accent:#06b6d4;
-    --secondary:#0f172a;
-    --light:#f8fafc;
-    --dark:#020617;
-    --text:#334155;
-    --card-bg:#fff;
-    --card-shadow:rgba(0,0,0,0.08);
+:root {
+  --primary: #2563eb;
+  --accent: #06b6d4;
+  --secondary: #0f172a;
+  --light: #f8fafc;
+  --dark: #020617;
+  --text: #334155;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.08);
 }
 
-/* ===================================
+/* ==============================
    BODY & CONTAINER
-=================================== */
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:var(--light);
-    color:var(--text);
-    line-height:1.6;
+============================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ===================================
+/* ==============================
    NAVBAR
-=================================== */
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:rgba(15,23,42,0.95);
-    backdrop-filter: blur(12px);
-    box-shadow:0 5px 25px rgba(0,0,0,0.08);
+============================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  position: relative;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#fff;
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-.navbar ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  transition: all 0.3s ease;
 }
 
-.navbar ul li a{
-    color:#e2e8f0;
-    text-decoration:none;
-    font-weight:500;
-    position:relative;
-    transition:0.3s;
+.navbar ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 
-/* hover underline */
-.navbar ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0%;
-    height:2px;
-    background:var(--accent);
-    transition:0.3s;
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.3s;
 }
 
-.navbar ul li a:hover{
-    color:#fff;
+.navbar ul li a:hover {
+  color: #fff;
 }
 
-.navbar ul li a:hover::after{
-    width:100%;
+.navbar ul li a:hover::after {
+  width: 100%;
 }
 
-/* ===================================
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ==============================
    HERO SLIDER
-=================================== */
-.hero{
-    position:relative;
-    height:90vh;
-    overflow:hidden;
+============================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
 }
 
-.slide{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    color:#fff;
-    padding:0 15px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  padding: 0 15px;
 }
 
-.hero-content h1{
-    font-size:3rem;
-    margin-bottom:15px;
-    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
 }
 
-.hero-content p{
-    color:#e2e8f0;
-    margin-bottom:20px;
-    font-size:1.2rem;
+.hero-content p {
+  color: #e2e8f0;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
 }
 
-/* ===================================
-   BUTTON
-=================================== */
-.btn{
-    display:inline-block;
-    padding:14px 36px;
-    font-weight:600;
-    font-size:1rem;
-    color:#fff;
-    text-decoration:none;
-    border-radius:10px;
-    background:linear-gradient(135deg, var(--primary), var(--accent));
-    box-shadow:0 12px 30px rgba(37,99,235,0.35);
-    transition:0.35s;
+/* ==============================
+   BUTTONS
+============================== */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+  transition: 0.35s;
 }
 
-.btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 18px 45px rgba(37,99,235,0.45);
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.45);
 }
 
-/* ===================================
-   SECTION
-=================================== */
-.section{
-    padding:90px 0;
+/* ==============================
+   SECTIONS
+============================== */
+.section {
+  padding: 90px 0;
 }
 
-.section h2{
-    text-align:center;
-    font-size:2.3rem;
-    margin-bottom:50px;
-    color:var(--secondary);
+.section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+  color: var(--secondary);
 }
 
-/* ===================================
+/* ==============================
    GRID CARDS
-=================================== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+============================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
-.card{
-    background:var(--card-bg);
-    padding:32px;
-    border-radius:16px;
-    box-shadow:0 15px 40px var(--card-shadow);
-    transition:0.35s;
-    position:relative;
-    overflow:hidden;
+.card {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px var(--card-shadow);
+  transition: 0.35s;
+  position: relative;
+  overflow: hidden;
 }
 
-.card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg, var(--primary), var(--accent));
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 25px 60px rgba(0,0,0,0.15);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* ===================================
-   FORM
-=================================== */
-form{
-    max-width:520px;
-    margin:auto;
+/* ==============================
+   FORM STYLING
+============================== */
+form {
+  max-width: 520px;
+  margin: auto;
 }
 
-input, textarea{
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    border:1px solid #e2e8f0;
-    border-radius:10px;
-    font-size:15px;
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
-input:focus, textarea:focus{
-    outline:none;
-    border-color:var(--primary);
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
 }
 
-/* ===================================
+/* ==============================
    FOOTER
-=================================== */
-footer{
-    background:var(--secondary);
-    color:#cbd5e1;
-    text-align:center;
-    padding:35px 0;
+============================== */
+footer {
+  background: var(--secondary);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 35px 0;
 }
 
-/* ===================================
+/* ==============================
    RESPONSIVE
-=================================== */
+============================== */
 @media(max-width:992px){
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero-content h1{
-        font-size:2.4rem;
-    }
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .hero-content h1{
+    font-size:2.4rem;
+  }
 }
 
 @media(max-width:768px){
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero{
-        height:70vh;
-    }
-
-    .hero-content h1{
-        font-size:1.8rem;
-    }
-
-    .navbar{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .navbar ul{
-        flex-direction:column;
-        display:none;
-        width:100%;
-        background:rgba(15,23,42,0.95);
-        padding:15px 0;
-        border-radius:0 0 10px 10px;
-    }
-
-    .navbar ul.active{
-        display:flex;
-    }
-
-    .hamburger{
-        display:block;
-        font-size:28px;
-        color:#fff;
-        cursor:pointer;
-        position:absolute;
-        right:20px;
-        top:18px;
-    }
+  .grid{
+    grid-template-columns:1fr;
+  }
+  .hero{
+    height:70vh;
+  }
+  .hero-content h1{
+    font-size:1.8rem;
+  }
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+  .navbar ul{
+    flex-direction:column;
+    display:none;
+    width:100%;
+    background:rgba(15,23,42,0.95);
+    padding:15px 0;
+    border-radius:0 0 10px 10px;
+  }
+  .navbar ul.active{
+    display:flex;
+  }
+  .hamburger{
+    display:block;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:18px;
+  }
 }
